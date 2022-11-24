@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons, FontAwesome, Feather } from '@expo/vector-icons';
 import Categories from '../components/Categories';
+import FeaturedRow from '../components/FeaturedRow';
 
 const HomeScreen = () => {
 
@@ -52,6 +53,19 @@ const HomeScreen = () => {
           {/* Categories */}
           <Categories/>
           {/* Featured rows */}
+          <FeaturedRow
+          id="123"
+          title="Featured"
+          description="Paid placements from our partners"
+          /><FeaturedRow
+          id="1234"
+          title="Tasty Discounts"
+          description="Everyone has been enjoying these juicy discounts!"
+          /><FeaturedRow
+          id="12345"
+          title="Offers near you"
+          description="Why not support your local restaurant tonight!"
+          />
         </ScrollView>
     </SafeAreaView>
   );
