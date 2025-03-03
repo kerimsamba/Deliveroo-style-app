@@ -3,6 +3,16 @@ import React from 'react'
 import CategoryCard from './CategoryCard'
 
 const Categories = () => {
+    // Define categories array with unique ids
+    const categories = [
+        { id: 1, title: "Testing1", imgUrl: "https://links.papareact.com/gn7" },
+        { id: 2, title: "Testing2", imgUrl: "https://links.papareact.com/gn7" },
+        { id: 3, title: "Testing3", imgUrl: "https://links.papareact.com/gn7" },
+        { id: 4, title: "Testing4", imgUrl: "https://links.papareact.com/gn7" },
+        { id: 5, title: "Testing5", imgUrl: "https://links.papareact.com/gn7" },
+        { id: 6, title: "Testing6", imgUrl: "https://links.papareact.com/gn7" },
+    ];
+
     return (
         <ScrollView
             contentContainerStyle={{
@@ -11,15 +21,15 @@ const Categories = () => {
             }}
             horizontal
             showsHorizontalScrollIndicator={false}
-            >
-
-            {/* CategoriesCard */}
-            <CategoryCard imgUrl='https://links.papareact.com/gn7' title="Testing1" />
-            <CategoryCard imgUrl='https://links.papareact.com/gn7' title="Testing2" />
-            <CategoryCard imgUrl='https://links.papareact.com/gn7' title="Testing3" />
-            <CategoryCard imgUrl='https://links.papareact.com/gn7' title="Testing4" />
-            <CategoryCard imgUrl='https://links.papareact.com/gn7' title="Testing5" />
-            <CategoryCard imgUrl='https://links.papareact.com/gn7' title="Testing6" />
+        >
+            {/* Map through categories array */}
+            {categories.map((category) => (
+                <CategoryCard 
+                    key={category.id}
+                    imgUrl={category.imgUrl} 
+                    title={category.title} 
+                />
+            ))}
         </ScrollView>
     )
 }
